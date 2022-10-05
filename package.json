@@ -10,9 +10,10 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "@fullcalendar/core": "^5.11.3",
+    "@fullcalendar/vue3": "^5.11.2",
     "@tauri-apps/api": "^1.1.0",
-    "vue": "^3.2.37",
-    "vue-cal": "^4.8.0"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.1.0",
