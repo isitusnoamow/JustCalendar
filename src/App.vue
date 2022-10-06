@@ -4,15 +4,36 @@
 import Greet from "./components/Greet.vue";
 import FullCalendar from "@fullcalendar/vue3";
 import '@fullcalendar/core/vdom';
+import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction'
+
+</script>
+
+<script>
+export default {
+  components: {
+    FullCalendar
+  },
+  data() {
+    return {
+      calendarOptions: {
+        plugins: [ dayGridPlugin, interactionPlugin ],
+        initialView: 'dayGridMonth'
+      }
+    }
+  }
+}
 </script>
 
 <template>
-  <FullCalendar></FullCalendar>
+  <div id="view">
+    <FullCalendar :options="calendarOptions" />
+  </div>
 </template>
 
 <style scoped>
-  FullCalendar{
-    height: 500px;
-    width: 100%;
+  #view{
+    max-width: 100%;
+    max-height: 100%;
   }
 </style>
