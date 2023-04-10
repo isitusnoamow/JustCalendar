@@ -1,4 +1,4 @@
-<script setup>
+<script>
 import { ref } from "vue";
 import { invoke } from "@tauri-apps/api/tauri";
 
@@ -12,10 +12,12 @@ async function greet() {
 </script>
 
 <template>
-  <div class="card">
-    <input id="greet-input" v-model="name" placeholder="Enter a name..." />
-    <button type="button" @click="greet()">Greet</button>
-  </div>
+  <div>
+    <div class="card">
+      <input id="greet-input" v-model="name" placeholder="Enter a name..." />
+      <button type="button" @click="greet()">Greet</button>
+    </div>
 
-  <p>{{ greetMsg }}</p>
+    <p>{{ greetMsg }}</p>
+  </div>
 </template>
